@@ -2,8 +2,6 @@ let args = process.argv.slice(2);
 
 const timer = (args) => {
 
-
-
   for (let i = 0; i < args.length; i++) {
 
     let delay = args[i];
@@ -15,7 +13,6 @@ const timer = (args) => {
     setTimeout(() => {
       process.stdout.write('\x07');
     }, delay * 1000);
-
   }
 };
 
