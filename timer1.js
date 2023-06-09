@@ -6,13 +6,14 @@ const timer = (args) => {
 
     let delay = args[i];
 
-    if (args[i] < 0 || typeof args[i] !== 'number') {
+    if (args[i] < 0 || isNaN(Number(args[i]))) {
       continue;
     }
-    
+
     setTimeout(() => {
       process.stdout.write('\x07');
     }, delay * 1000);
+
   }
 };
 
